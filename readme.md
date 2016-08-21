@@ -4,6 +4,10 @@
 
 This is modified version form original Larave4 generator: https://packagist.org/packages/way/generators
 
+#TL;DR for one-line-generating module
+
+	php artisan generate:scaffold clients --fields="first_name:string, last_name:string, email:string, permalink:string"
+
 #Changelog:
 *21/08/2016:
 	- added routes generating
