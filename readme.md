@@ -1,7 +1,25 @@
 # Fast Workflow in Laravel With Custom Generators
 
-[![Build Status](https://travis-ci.org/JeffreyWay/Laravel-4-Generators.png?branch=master)](https://travis-ci.org/JeffreyWay/Laravel-4-Generators)
+## Notes
 
+This is modified version form original Larave4 generator: https://packagist.org/packages/way/generators
+
+Usage: 
+
+Here is a sample composer.json that installs the same package via a VCS repo:
+
+	{
+	    "repositories": [
+	        {
+	            "url": "https://github.com/l3pp4rd/DoctrineExtensions.git",
+	            "type": "git"
+	        }
+	    ],
+	    "require": {
+	        "gedmo/doctrine-extensions": "~2.3"
+	    }
+	}
+ 
 This Laravel package provides a variety of generators to speed up your development process. These generators include:
 
 - `generate:model`
