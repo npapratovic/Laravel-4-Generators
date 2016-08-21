@@ -50,16 +50,11 @@ Here is a sample composer.json that installs the same package via a VCS repo:
 	}
 
 Standard usage would be: 
-
 	{
-	    "repositories": [
-	        {
-	            "url": "https://github.com/npapratovic/Laravel-4-Generators.git",
-	            "type": "git"
-	        }
-	    ] 
+		"require-dev": {
+		    "way/generators": "~2.0"
+		}
 	}
- 
 
 Next, update Composer from the Terminal:
 
