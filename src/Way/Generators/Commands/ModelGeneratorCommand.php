@@ -40,7 +40,7 @@ class ModelGeneratorCommand extends GeneratorCommand {
     {
         return [
             'NAME' => ucwords($this->argument('modelName')),
-            'NAMESPACE' => 'App'
+            'TABLE' => strtolower($this->argument('modelName'))
         ];
     }
 

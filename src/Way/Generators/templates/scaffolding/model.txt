@@ -1,9 +1,60 @@
-<?php namespace $NAMESPACE$;
+<?php
 
-use Illuminate\Database\Eloquent\Model;
+/*
+*	$NAME$
+*
+*	Handles backend functions
+*
+*	Developed by Culex d.o.o. @ 2016
+*/
 
-class $NAME$ extends Model {
+class $NAME$ extends \Eloquent {
 
-	protected $fillable = [];
+	protected $table = '$TABLE$';
+
+	// New entry validation
+	public static $store_rules = array( 
+	);
+
+	// Edit entry validation
+	public static $update_rules = array( 
+	);
+
+	/*
+	*	Get entries
+	*
+	*	$id 		->	integer or null	->	if ID, retrieve specific entry
+	*/
+
+	public static function getEntries($id = null)
+	{
+		try
+		{
+			$entry = DB::table('$TABLE$')
+				->select(
+					'$TABLE$.id AS id', 
+					'$TABLE$.created_at AS created_at'
+				);
+
+			if ($id != null)
+			{
+				// Retrieve specific $TABLE$
+				$entry = $entry->where('$TABLE$.id', '=', $id)->first();
+				return array('status' => 1, 'entry' => $entry);
+			} 
+
+			// Default return
+			$entries = $entry;
+
+			// Return all entries
+			$entries = $entries->get();
+
+			return array('status' => 1, 'entries' => $entries);
+		}
+		catch (Exception $exp)
+		{
+			return array('status' => 0, 'reason' => $exp->getMessage());
+		}
+	}
 
 }

@@ -4,21 +4,11 @@
 
 This is modified version form original Larave4 generator: https://packagist.org/packages/way/generators
 
-Usage: 
-
-Here is a sample composer.json that installs the same package via a VCS repo:
-
-	{
-	    "repositories": [
-	        {
-	            "url": "https://github.com/l3pp4rd/DoctrineExtensions.git",
-	            "type": "git"
-	        }
-	    ],
-	    "require": {
-	        "gedmo/doctrine-extensions": "~2.3"
-	    }
-	}
+#Changelog:
+*21/08/2016:
+	- added routes generating
+	- improved controller and model scaffolding template to fit the needs
+	- changed ModelGeneratorCommand to fit the needs
  
 This Laravel package provides a variety of generators to speed up your development process. These generators include:
 
@@ -44,10 +34,28 @@ If you're using Laravel 5, then [use this package instead](https://github.com/la
 
 Begin by installing this package through Composer. Edit your project's `composer.json` file to require `way/generators`.
 
-	"require-dev": {
-		"way/generators": "~2.0"
+Here is a sample composer.json that installs the same package via a VCS repo:
+
+	{
+	    "repositories": [
+	        {
+	            "url": "https://github.com/npapratovic/Laravel-4-Generators.git",
+	            "type": "git"
+	        }
+	    ] 
 	}
 
+Standard usage would be: 
+
+	{
+	    "repositories": [
+	        {
+	            "url": "https://github.com/npapratovic/Laravel-4-Generators.git",
+	            "type": "git"
+	        }
+	    ] 
+	}
+ 
 
 Next, update Composer from the Terminal:
 
